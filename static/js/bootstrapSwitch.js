@@ -26,6 +26,12 @@
               , offLabel = "OFF"
               , icon = false;
 
+            if ($element.data("bootstrapSwitchInit")) {
+                return;
+            }
+
+            $element.data("bootstrapSwitchInit", true);
+
             $.each(['switch-mini', 'switch-small', 'switch-large'], function (i, el) {
               if (classes.indexOf(el) >= 0)
                 myClasses = el;
